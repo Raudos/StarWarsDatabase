@@ -39,48 +39,44 @@ var close = function() {
 $rebelLogo.on("click", function() {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
-		$layer3.fadeOut(0);
 		$layer3r.fadeIn(2000);
 		open();
 	} else {
 		close();
 		$layer3.fadeOut(1000);
-		$layer3r.fadeIn(5000);
+		$layer3r.delay(1000).fadeIn(3000);
 	}
 });
 $empireLogo.on("click", function() {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
-		$layer3.fadeOut(0);
 		$layer3e.fadeIn(2000);
 		open();
 	} else {
 		close();
 		$layer3.fadeOut(1000);
-		$layer3e.fadeIn(5000);
+		$layer3e.delay(1000).fadeIn(3000);
 	}
 });
 $orLogo.on("click", function() {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
-		$layer3.fadeOut(0);
 		$layer3or.fadeIn(2000);
 		open();
 	} else {
 		close();
 		$layer3.fadeOut(1000);
-		$layer3or.fadeIn(5000);
+		$layer3or.delay(1000).fadeIn(3000);
 	}
 });
 $sLogo.on("click", function() {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
-		$layer3.fadeOut(0);
 		$layer3s.fadeIn(2000);
 		open();
 	} else {
 		close();
 		$layer3.fadeOut(1000);
-		$layer3s.fadeIn(5000);
+		$layer3s.delay(1000).fadeIn(3000);
 	}
 });
