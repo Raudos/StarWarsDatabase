@@ -1,6 +1,7 @@
 // Blastdoors
-var $firstBlast = $(".blastdoors:nth-child(5)");
-var $secondBlast = $(".blastdoors:nth-child(6)");
+var $firstBlast = $(".blastdoors:nth-child(1)");
+var $secondBlast = $(".blastdoors:nth-child(2)");
+var $blastWidth = $firstBlast.width();
 var $closed = $firstBlast.hasClass("closed");
 // Layers
 var $layer3r = $(".layer3r");
@@ -17,10 +18,10 @@ var $main = $(".main");
 // Functions
 var open = function() {
 	$firstBlast.animate({
-			left: "-100px"
+			left: -$blastWidth
 		}, 2000);
 	$secondBlast.animate({
-		right: "-100px"
+		right: -$blastWidth
 	}, 2000);
 	$firstBlast.removeClass("closed");
 }
