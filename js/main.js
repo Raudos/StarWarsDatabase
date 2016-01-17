@@ -19,19 +19,19 @@ var $main = $(".main");
 var open = function() {
 	$firstBlast.animate({
 			left: -$blastWidth
-		}, 2000);
+		}, 1500);
 	$secondBlast.animate({
 		right: -$blastWidth
-	}, 2000);
+	}, 1500);
 	$firstBlast.removeClass("closed");
 }
 var close = function() {
 	$firstBlast.animate({
 			left: "0px"
-		}, 2000);
+		}, 1500);
 	$secondBlast.animate({
 			right: "0px"
-		}, 2000);
+		}, 1500);
 	$firstBlast.addClass("closed");
 	open();
 }
@@ -81,3 +81,9 @@ $sLogo.on("click", function() {
 		$layer3s.delay(1000).fadeIn(3000);
 	}
 });
+// Mousover 
+$layer3.hover(function() {
+	$(this).siblings(".tooltip").css("display", "inline");
+}, function() {
+	$(this).siblings(".tooltip").css("display", "none");
+}); 

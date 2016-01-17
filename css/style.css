@@ -25,7 +25,7 @@ body {
 	height: 100%;
 }
 #header img{
-	width: 49%;
+	width: 48%;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -57,7 +57,7 @@ body {
 	opacity: 0.5;
 }
 #menu {
-	width: auto;
+	width: 26%;
 	height: 100%;
 }
 #menu img {
@@ -70,11 +70,10 @@ body {
 #sideMenu {
 	width: 52%;
 	height: 100%;
-	margin-left: 4px;
 	border: 5px solid #FAE91E;
 	border-radius: 10px;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 }
 #sideMenu img:not(.blastdoors){
 	width: 90%;
@@ -85,6 +84,13 @@ body {
 	width: 95%;
 	border: 3px solid #FAE91E;
 	border-radius: 50%;
+}
+#blastContainer {
+	position: absolute;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	
 }
 .blastdoors {
 	position: absolute;
@@ -101,16 +107,12 @@ body {
 .frame {
 	height: 50%;
 	width: 25%;
-	background: black;
+	background: transparent;
 	position: relative;
 	z-index: 0;
-	overflow: hidden;
-	float: right
-}
-
-.layer1 {
-	position: absolute;
-	z-index: 4;
+	float: right;
+	overflow: visible;
+	
 }
 .layer3r, .layer3e, .layer3or, .layer3s {
 	position: absolute;
@@ -118,6 +120,21 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
+	display: none;
+}
+.tooltip {
+	color: #FAE91E;
+	background-color: black;
+	font-family: impact;
+	border: 3px solid #FAE91E;
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+	top: 0%;
+	left: 0%;
+	transform: translate(-50%, -100%);
+	position: absolute;
+	z-index: 1000;
 	display: none;
 }
 /* Third row */
@@ -131,5 +148,4 @@ body {
 	height: 100%;
 	border: 5px solid #FAE91E;
 	border-radius: 10px;
-	margin-left: 10px;
 }
