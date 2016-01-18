@@ -15,6 +15,8 @@ var $empireLogo = $("#empireLogo");
 var $orLogo = $("#orLogo");
 var $sLogo = $("#sLogo");
 var $main = $(".main");
+//Fields
+var $info = $("#info");
 // Functions
 var open = function() {
 	$firstBlast.animate({
@@ -89,3 +91,10 @@ $layer3.hover(function() {
 }, function() {
 	$(this).siblings(classToggle).css("display", "none");
 }); 
+// Ajax
+$layer3.on('click', function() {
+	var whatPartToLoad = this.id;
+	var whatFileToLoad = "ajax.html"
+	var stringMe = whatFileToLoad + " #" + whatPartToLoad;
+	$info.load(stringMe);
+})

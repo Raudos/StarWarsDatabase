@@ -13,7 +13,7 @@ body {
 	width: 10%;
 	height: 100%;
 }
-.row *{
+.row *:not(br) {
 	float: left;
 }
 /* First row */
@@ -154,7 +154,7 @@ img.layer3r, img.layer3e, img.layer3or, img.layer3s {
 }
 #info {
 	width: 77%;
-	height: 100%;
+	height: 420px;
 	border: 5px solid #FAE91E;
 	border-radius: 10px;
 }
