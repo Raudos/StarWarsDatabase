@@ -55,7 +55,7 @@ body {
 }
 .factionLogo:hover {
 	opacity: 0.5;
-	box-shadow: 1px 1px 30px #888888;
+	box-shadow: 1px 1px 30px 15px #FAE91E;
 	border-radius: 50%;
 }
 #menu {
@@ -134,7 +134,7 @@ img.layer3r, img.layer3e, img.layer3or, img.layer3s {
 	height: auto;
 	top: 0%;
 	left: 0%;
-	transform: translate(-50%, -100%);
+	transform: translate(-50%, -50%);
 	position: absolute;
 	z-index: 1000;
 	display: none;
