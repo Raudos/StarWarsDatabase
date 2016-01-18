@@ -4,11 +4,11 @@ var $secondBlast = $(".blastdoors:nth-child(2)");
 var $blastWidth = $firstBlast.width();
 var $closed = $firstBlast.hasClass("closed");
 // Layers
-var $layer3r = $(".layer3r");
-var $layer3e = $(".layer3e");
-var $layer3or = $(".layer3or");
-var $layer3s = $(".layer3s");
-var $layer3 = $(".layer3");
+var $layer3r = $("img.layer3r");
+var $layer3e = $("img.layer3e");
+var $layer3or = $("img.layer3or");
+var $layer3s = $("img.layer3s");
+var $layer3 = $("img.layer3");
 // Logos
 var $rebelLogo = $("#rebelLogo");
 var $empireLogo = $("#empireLogo");
@@ -83,7 +83,9 @@ $sLogo.on("click", function() {
 });
 // Mousover 
 $layer3.hover(function() {
-	$(this).siblings(".tooltip").css("display", "inline");
+	classToggle = this.classList[0]; //This has to be [0] element, as i put all the marking element of the side as a first one
+	classToggle = "." + classToggle;
+	$(this).siblings(classToggle).css("display", "inline");
 }, function() {
-	$(this).siblings(".tooltip").css("display", "none");
+	$(this).siblings(classToggle).css("display", "none");
 }); 
