@@ -138,5 +138,13 @@ $(document).ajaxComplete(function(event) {
 		$("#info").delay(1000).fadeIn(4000);
 		closeText(event);
 	}
-	
+	swapPhoto();
 })
+// Gallery
+function swapPhoto () {
+	$(".galery").on('click', 'img', function() {
+		var currentImg = $(".galery img:first-child").replaceWith(this);
+		$(".galery img:first-child").replaceWith(this);
+		$(".galery").append(currentImg);
+	});
+}
