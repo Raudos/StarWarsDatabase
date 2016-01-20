@@ -3,6 +3,11 @@ var $firstBlast = $(".blastdoors:nth-child(1)");
 var $secondBlast = $(".blastdoors:nth-child(2)");
 var $blastWidth = $firstBlast.width();
 var $closed = $firstBlast.hasClass("closed");
+// Blastdoors text
+var $firstBlastText = $(".blastdoorsText:nth-child(1)");
+var $secondBlastText = $(".blastdoorsText:nth-child(2)");
+var $blastWidthText = $firstBlastText.width();
+var $closedText = $firstBlastText.hasClass("closed");
 // Layers
 var $layer3r = $("img.layer3r");
 var $layer3e = $("img.layer3e");
@@ -37,7 +42,25 @@ var close = function() {
 	$firstBlast.addClass("closed");
 	open();
 }
-
+var openText = function() {
+	$firstBlastText.animate({
+			left: -$blastWidthText
+		}, 1500);
+	$secondBlastText.animate({
+		right: -$blastWidthText
+	}, 1500);
+	$firstBlastText.removeClass("closed");
+}
+var closeText = function() {
+	$firstBlastText.animate({
+			left: "0px"
+		}, 1500);
+	$secondBlastText.animate({
+			right: "0px"
+		}, 1500);
+	$firstBlastText.addClass("closed");
+	openText();
+}
 // Script
 $rebelLogo.on("click", function() {
 	$closed = $firstBlast.hasClass("closed");
@@ -96,5 +119,18 @@ $layer3.on('click', function() {
 	var whatPartToLoad = this.id;
 	var whatFileToLoad = "ajax.html"
 	var stringMe = whatFileToLoad + " #" + whatPartToLoad;
-	$info.load(stringMe);
+	$("#info").fadeOut(2000, function() {
+		$info.load(stringMe);
+	});
+})
+$(document).ajaxComplete(function() {
+	$closedText = $firstBlastText.hasClass("closed");
+	if ($closedText) {
+		$("#info").delay(1000).fadeIn(4000);
+		openText();
+	} else {
+		$("#info").delay(1000).fadeIn(4000);
+		closeText();
+	}
+	
 })

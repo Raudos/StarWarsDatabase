@@ -93,7 +93,6 @@ body {
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
-	
 }
 .blastdoors {
 	position: absolute;
@@ -152,9 +151,39 @@ img.layer3r, img.layer3e, img.layer3or, img.layer3s {
 	margin-top: 14px;
 	text-align: center;	
 }
-#info {
+#infoContainer {
 	width: 77%;
 	height: 420px;
 	border: 5px solid #FAE91E;
 	border-radius: 10px;
+}
+#blastContainerText {
+	position: absolute;
+	overflow: hidden;
+	height: 420px;
+	width: 77%;
+}
+#info {
+	position: absolute;
+	overflow: hidden;
+	height: 420px;
+	width: 77%;
+}
+#blastContainerText .blastdoorsText:first-child {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	border: 0px solid black;
+	border-radius: 0px;
+	left: 0%;
+	z-index: 10;
+}
+#blastContainerText .blastdoorsText:nth-child(2) {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	border: 0px solid black;
+	border-radius: 0px;
+	z-index: 10;
+	right: 0%;
 }
