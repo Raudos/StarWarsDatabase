@@ -51,7 +51,7 @@ var openText = function() {
 	}, 1500);
 	$firstBlastText.removeClass("closed");
 }
-var closeText = function() {
+var closeText = function(event) {
 	$firstBlastText.animate({
 			left: "0px"
 		}, 1500);
@@ -59,10 +59,12 @@ var closeText = function() {
 			right: "0px"
 		}, 1500);
 	$firstBlastText.addClass("closed");
-	openText();
+	if (event.target.className != "factionLogo") {
+		openText();
+	}
 }
 // Script
-$rebelLogo.on("click", function() {
+$rebelLogo.on("click", function(event) {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
 		$layer3r.fadeIn(2000);
@@ -72,8 +74,9 @@ $rebelLogo.on("click", function() {
 		$layer3.fadeOut(1000);
 		$layer3r.delay(1000).fadeIn(3000);
 	}
+	closeText(event);
 });
-$empireLogo.on("click", function() {
+$empireLogo.on("click", function(event) {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
 		$layer3e.fadeIn(2000);
@@ -83,8 +86,9 @@ $empireLogo.on("click", function() {
 		$layer3.fadeOut(1000);
 		$layer3e.delay(1000).fadeIn(3000);
 	}
+	closeText(event);
 });
-$orLogo.on("click", function() {
+$orLogo.on("click", function(event) {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
 		$layer3or.fadeIn(2000);
@@ -94,8 +98,9 @@ $orLogo.on("click", function() {
 		$layer3.fadeOut(1000);
 		$layer3or.delay(1000).fadeIn(3000);
 	}
+	closeText(event);
 });
-$sLogo.on("click", function() {
+$sLogo.on("click", function(event) {
 	$closed = $firstBlast.hasClass("closed");
 	if($closed) {
 		$layer3s.fadeIn(2000);
@@ -105,6 +110,7 @@ $sLogo.on("click", function() {
 		$layer3.fadeOut(1000);
 		$layer3s.delay(1000).fadeIn(3000);
 	}
+	closeText(event);
 });
 // Mousover 
 $layer3.hover(function() {
@@ -123,14 +129,14 @@ $layer3.on('click', function() {
 		$info.load(stringMe);
 	});
 })
-$(document).ajaxComplete(function() {
+$(document).ajaxComplete(function(event) {
 	$closedText = $firstBlastText.hasClass("closed");
 	if ($closedText) {
 		$("#info").delay(1000).fadeIn(4000);
 		openText();
 	} else {
 		$("#info").delay(1000).fadeIn(4000);
-		closeText();
+		closeText(event);
 	}
 	
 })
