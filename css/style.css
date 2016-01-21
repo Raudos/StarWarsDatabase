@@ -116,7 +116,7 @@ body {
 	overflow: visible;
 	
 }
-img.layer3r, img.layer3e, img.layer3or, img.layer3s {
+#sideMenu img.layer3r, #sideMenu img.layer3e, #sideMenu img.layer3or, #sideMenu img.layer3s {
 	position: absolute;
 	top: 50%;
 	left: 50%;

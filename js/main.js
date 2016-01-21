@@ -59,59 +59,25 @@ var closeText = function(event) {
 			right: "0px"
 		}, 1500);
 	$firstBlastText.addClass("closed");
-	if (event.target.className != "factionLogo") {
+	if (event.type == "ajaxComplete" || event.target.classList[1] != "factionLogo") { //It is important to have event.type first, otherwise you will have an error
 		openText();
 	}
 }
 // Script
-$rebelLogo.on("click", function(event) {
+$(".factionLogo").on('click', function(event) {
+	var clickedLogo = this.classList[0];
+	clickedLogo = "." + clickedLogo + ":not(.factionlogo):not(.tooltip)";
 	$closed = $firstBlast.hasClass("closed");
-	if($closed) {
-		$layer3r.fadeIn(2000);
+	if ($closed) {
+		$(clickedLogo).fadeIn(2000);
 		open();
 	} else {
 		close();
 		$layer3.fadeOut(1000);
-		$layer3r.delay(1000).fadeIn(3000);
+		$(clickedLogo).delay(1000).fadeIn(3000);
 	}
 	closeText(event);
-});
-$empireLogo.on("click", function(event) {
-	$closed = $firstBlast.hasClass("closed");
-	if($closed) {
-		$layer3e.fadeIn(2000);
-		open();
-	} else {
-		close();
-		$layer3.fadeOut(1000);
-		$layer3e.delay(1000).fadeIn(3000);
-	}
-	closeText(event);
-});
-$orLogo.on("click", function(event) {
-	$closed = $firstBlast.hasClass("closed");
-	if($closed) {
-		$layer3or.fadeIn(2000);
-		open();
-	} else {
-		close();
-		$layer3.fadeOut(1000);
-		$layer3or.delay(1000).fadeIn(3000);
-	}
-	closeText(event);
-});
-$sLogo.on("click", function(event) {
-	$closed = $firstBlast.hasClass("closed");
-	if($closed) {
-		$layer3s.fadeIn(2000);
-		open();
-	} else {
-		close();
-		$layer3.fadeOut(1000);
-		$layer3s.delay(1000).fadeIn(3000);
-	}
-	closeText(event);
-});
+})
 // Mousover 
 $layer3.hover(function() {
 	classToggle = this.classList[0]; //This has to be [0] element, as i put all the marking element of the side as a first one
