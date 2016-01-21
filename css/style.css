@@ -42,9 +42,15 @@ body {
 	border-radius: 10px;
 	color: #FAE91E;
 	font-family: impact;
-	padding: 5px;
+	padding: 3px;
 	font-size: 16px;
-}
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e1e1e+21,0e0e0e+100 */
+	background: rgb(30,30,30); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(30,30,30,1) 21%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}	
 .info {
 	width: 80%;
 }
@@ -77,16 +83,22 @@ body {
 	border-radius: 10px;
 	position: relative;
 	overflow: visible;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+21,0e0e0e+100 */
+	background: rgb(30,30,30); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(30,30,30,1) 21%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 }
 #sideMenu img:not(.blastdoors){
 	width: 90%;
 	border: 0px solid black;
-	border-radius: 50%;
+	border-radius: 20%;
 }
 #sideMenu img:hover:not(.blastdoors) {
 	width: 95%;
 	border: 3px solid #FAE91E;
-	border-radius: 50%;
+	border-radius: 20%;
 }
 #blastContainer {
 	position: absolute;
@@ -123,6 +135,7 @@ body {
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	display: none;
+	box-shadow: 1px 1px 8px #888888;
 }
 .tooltip {
 	color: #FAE91E;
@@ -133,7 +146,7 @@ body {
 	height: auto;
 	top: 0%;
 	left: 0%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -100%);
 	position: absolute;
 	z-index: 1000;
 	display: none;
@@ -168,6 +181,12 @@ body {
 	overflow: hidden;
 	height: 420px;
 	width: 77%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e1e1e+21,0e0e0e+100 */
+	background: rgb(30,30,30); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(30,30,30,1) 21%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(30,30,30,1) 21%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 }
 #blastContainerText .blastdoorsText:first-child {
 	position: absolute;

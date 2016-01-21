@@ -24,17 +24,23 @@
 	float: left;
 	overflow: hidden;
 }
-.galery img:first-child {
+.mainImg {
 	height: 75%;
+	width: 100%;
 	float: left;
+}
+.mainImg img {
+	height: 100%;
+	overflow: hidden;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+=
 }
 .galery img:not(:first-child) {
 	width: 24%;
 	height: 25%;
-	margin: 0px 0px 3px 4px;
+	margin: 2px 0px 3px 4px;
 	float: left;
 }
 .galery img:not(:first-child):hover {

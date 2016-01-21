@@ -9,17 +9,7 @@ var $secondBlastText = $(".blastdoorsText:nth-child(2)");
 var $blastWidthText = $firstBlastText.width();
 var $closedText = $firstBlastText.hasClass("closed");
 // Layers
-var $layer3r = $("img.layer3r");
-var $layer3e = $("img.layer3e");
-var $layer3or = $("img.layer3or");
-var $layer3s = $("img.layer3s");
 var $layer3 = $("img.layer3");
-// Logos
-var $rebelLogo = $("#rebelLogo");
-var $empireLogo = $("#empireLogo");
-var $orLogo = $("#orLogo");
-var $sLogo = $("#sLogo");
-var $main = $(".main");
 //Fields
 var $info = $("#info");
 // Functions
@@ -88,11 +78,11 @@ $layer3.hover(function() {
 }); 
 // Ajax
 $layer3.on('click', function() {
-	var whatPartToLoad = this.id;
-	var whatFileToLoad = "ajax.html"
-	var stringMe = whatFileToLoad + " #" + whatPartToLoad;
+	var $whatPartToLoad = this.id;
+	var $whatFileToLoad = "ajax.html"
+	var $stringMe = $whatFileToLoad + " #" + $whatPartToLoad;
 	$("#info").fadeOut(2000, function() {
-		$info.load(stringMe);
+		$info.load($stringMe);
 	});
 })
 $(document).ajaxComplete(function(event) {
@@ -109,8 +99,9 @@ $(document).ajaxComplete(function(event) {
 // Gallery
 function swapPhoto () {
 	$(".galery").on('click', 'img', function() {
-		var currentImg = $(".galery img:first-child").replaceWith(this);
+		var $currentImg = $(".galery img:first-child").replaceWith(this);
 		$(".galery img:first-child").replaceWith(this);
-		$(".galery").append(currentImg);
+		$(".galery").append($currentImg);
+		console.log($currentImg);
 	});
 }
