@@ -59,6 +59,9 @@ body {
 	height: 32%;
 	margin-top: 4px;
 }
+.factionLogo {
+	cursor: pointer;
+}
 .factionLogo:hover {
 	opacity: 0.5;
 	box-shadow: 1px 1px 30px 15px #FAE91E;
@@ -136,6 +139,7 @@ body {
 	z-index: 2;
 	display: none;
 	box-shadow: 1px 1px 8px #888888;
+	cursor: pointer;
 }
 .tooltip {
 	color: #FAE91E;

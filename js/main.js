@@ -19,7 +19,9 @@ var open = function() {
 		}, 1500);
 	$secondBlast.animate({
 		right: -$blastWidth
-	}, 1500);
+	}, 1500, function() {
+		$(".factionLogo").css("pointer-events", "auto");
+	});
 	$firstBlast.removeClass("closed");
 }
 var close = function() {
@@ -38,7 +40,9 @@ var openText = function() {
 		}, 1500);
 	$secondBlastText.animate({
 		right: -$blastWidthText
-	}, 1500);
+	}, 1500, function() {
+		$layer3.css("pointer-events", "auto");
+	});
 	$firstBlastText.removeClass("closed");
 }
 var closeText = function(event) {
@@ -55,6 +59,8 @@ var closeText = function(event) {
 }
 // Script
 $(".factionLogo").on('click', function(event) {
+	//Disable faction buttons
+	$(".factionLogo").css("pointer-events", "none");
 	var clickedLogo = this.classList[0];
 	clickedLogo = "." + clickedLogo + ":not(.factionlogo):not(.tooltip)";
 	$closed = $firstBlast.hasClass("closed");
@@ -66,7 +72,7 @@ $(".factionLogo").on('click', function(event) {
 		$layer3.fadeOut(1000);
 		$(clickedLogo).delay(1000).fadeIn(3000);
 	}
-	closeText(event);
+	closeText(event)
 })
 // Mousover 
 $layer3.hover(function() {
@@ -81,6 +87,7 @@ $layer3.on('click', function() {
 	var $whatPartToLoad = this.id;
 	var $whatFileToLoad = "ajax.html"
 	var $stringMe = $whatFileToLoad + " #" + $whatPartToLoad;
+	$layer3.css("pointer-events", "none");
 	$("#info").fadeOut(2000, function() {
 		$info.load($stringMe);
 	});
